@@ -7,7 +7,7 @@ void main() => runApp(MemeApp());
 
 const _buttonDescription = 'Começar a usar';
 const _appDescription = 'Saber como você está hoje é fundamental para organizar o trabalho com o time e garantir o aprendizado em equipe';
-const _title = 'Descobrir como você está hoje nunca foi tão fácil!';
+const _title = 'The memes are coming!';
 
 class MemeApp extends StatelessWidget {
   @override
@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
             children: <Widget>[
               TopImage(),
               Title(),
-              Description(),
+              // Description(),
               StartUsingButton()
             ],
           ),
@@ -88,13 +88,14 @@ class Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 64.0, horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 48.0, horizontal: 16.0),
       child: Align(
           alignment: Alignment.centerLeft,
-          child: Text(
-            _title,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontFamily: 'GameOfThrones'),
+          child: Center(
+            child: Text(
+              _title,
+              style: TextStyle(fontFamily: 'GameOfThrones'),
+            ),
           )),
     );
   }
